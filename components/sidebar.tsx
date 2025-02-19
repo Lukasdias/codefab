@@ -66,7 +66,7 @@ export default function Sidebar({
   fableId: string;
   onFileSelect: (content: string) => void;
 }) {
-  const [tree, setTree] = useState(initialTree);
+  const [tree, _] = useState(initialTree);
   const [isAddPageOpen, setIsAddPageOpen] = useState(false);
   const [isAddAssetOpen, setIsAddAssetOpen] = useState(false);
   const [currentFolder, setCurrentFolder] = useState<string | null>(null);
