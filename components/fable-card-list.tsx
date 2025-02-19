@@ -1,19 +1,37 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Switch } from "@/components/ui/switch"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { Button } from "@/components/ui/button"
-import { MoreVertical, MessageSquare, Heart, GitFork, Code } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Switch } from "@/components/ui/switch";
+import {
+  Code,
+  GitFork,
+  Heart,
+  MessageSquare,
+  MoreVertical,
+} from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 type Fable = {
-  id: string
-  title: string
-  author: string
-  description: string
-}
+  id: string;
+  title: string;
+  author: string;
+  description: string;
+};
 
 const fables: Fable[] = [
   {
@@ -22,17 +40,22 @@ const fables: Fable[] = [
     author: "Alice",
     description: "A magical tale of friendship and adventure.",
   },
-  { id: "2", title: "The Lost City", author: "Bob", description: "An exciting journey to find a hidden civilization." },
+  {
+    id: "2",
+    title: "The Lost City",
+    author: "Bob",
+    description: "An exciting journey to find a hidden civilization.",
+  },
   {
     id: "3",
     title: "The Time Traveler",
     author: "Charlie",
     description: "A mind-bending story of past, present, and future.",
   },
-]
+];
 
 export default function FableCardList() {
-  const [showOtherUserFables, setShowOtherUserFables] = useState(false)
+  const [showOtherUserFables, setShowOtherUserFables] = useState(false);
 
   return (
     <div>
@@ -40,7 +63,10 @@ export default function FableCardList() {
         <h2 className="text-2xl font-semibold">Fables</h2>
         <div className="flex items-center">
           <span className="mr-2">Show other users&apos; fables</span>
-          <Switch checked={showOtherUserFables} onCheckedChange={setShowOtherUserFables} />
+          <Switch
+            checked={showOtherUserFables}
+            onCheckedChange={setShowOtherUserFables}
+          />
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -82,15 +108,14 @@ export default function FableCardList() {
             </CardContent>
             <CardFooter>
               <Link href={`/fable/${fable.id}/edit`} passHref>
-                <Button variant="outline" as="a">
-                  Edit Fable
-                </Button>
+                <a>
+                  <Button variant="outline">Edit Fable</Button>
+                </a>
               </Link>
             </CardFooter>
           </Card>
         ))}
       </div>
     </div>
-  )
+  );
 }
-

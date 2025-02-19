@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Preview({ code }: { code: string }) {
   const [showErrors, setShowErrors] = useState(false);
 
-  const errors = [];
+  const errors: string[] = [];
 
   const toggleView = () => setShowErrors(!showErrors);
 
