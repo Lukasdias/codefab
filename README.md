@@ -9,13 +9,15 @@ Este repositório contém uma implementação do modelo **Fabulas**, concebido n
 - **Preview**: Visualização em tempo real da fábula sendo executada.
 - **Integração com GitHub**: Cada fábula é, na verdade, um repositório no GitHub. A única forma de autenticação é através do GitHub, utilizando OAuth.
 
-## Tecnologias Utilizadas
+## Principais Tecnologias Utilizadas
 
-- **Next.js 15**: Framework React utilizado para a construção da aplicação.
-- **Octokit**: Biblioteca para interação com a API do GitHub. [Saiba mais sobre Octokit](https://octokit.github.io/).
-- **Next-Auth ou Clerk**: Em estudo para implementação de autenticação OAuth.
-- **React**: Biblioteca para construção de interfaces de usuário.
-- **XML**: Linguagem de marcação utilizada para definir as fábulas.
+- **[Next.js 15](https://nextjs.org/)**: Framework React utilizado para a construção da aplicação.
+- **[Octokit](https://octokit.github.io/)**: Biblioteca para interação com a API do GitHub.
+- **[Next-Auth](https://next-auth.js.org/)** ou **[Clerk](https://clerk.dev/)**: Em estudo para implementação de autenticação OAuth.
+- **[React](https://reactjs.org/)**: Biblioteca para construção de interfaces de usuário.
+- **[XML](https://www.w3.org/XML/)**: Linguagem de marcação utilizada para definir as fábulas.
+- **[Shadcn UI](https://shadcn-ui.com/)**: Base da interface por motivos de praticidade.
+- **[CodeMirror](https://codemirror.net/)**: Utilizado como editor de código.
 
 ## Estado Atual do Projeto
 
@@ -32,6 +34,8 @@ Estou ainda trabalhando no projeto, e as próximas etapas incluem:
 - Melhorias na estilização da interface.
 - Implementação de testes unitários.
 - Criação de API routes no front-end para cada ação necessária (não haverá back-end separado, tudo será feito no front-end).
+- Melhorias na experiência do usuário com **Shadcn UI**, pois muitas funcionalidades ainda estão primitivas.
+- Melhorias no editor de código utilizando **CodeMirror** para proporcionar uma experiência mais rica e intuitiva.
 
 ## Contato
 
