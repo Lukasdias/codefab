@@ -5,71 +5,12 @@ import Header from "@/components/header";
 import Preview from "@/components/preview";
 import Sidebar from "@/components/sidebar";
 import { xml } from "@codemirror/lang-xml";
-import {
-  IconBrandGithub,
-  IconExchange,
-  IconHome,
-  IconNewSection,
-  IconTerminal2,
-} from "@tabler/icons-react";
+
 import { dracula } from "@uiw/codemirror-theme-dracula";
 import { githubLight } from "@uiw/codemirror-theme-github";
 import CodeMirror from "@uiw/react-codemirror";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-
-const links = [
-  {
-    title: "Save",
-    icon: (
-      <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    onClick: () => {
-      console.log("Saving fable...");
-    },
-    href: "#",
-  },
-  {
-    title: "Load",
-    icon: (
-      <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    onClick: () => {
-      console.log("Loading fable...");
-    },
-    href: "#",
-  },
-  {
-    title: "New Section",
-    icon: (
-      <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    onClick: () => {
-      console.log("Adding new section...");
-    },
-    href: "#",
-  },
-  {
-    title: "Preview",
-    icon: (
-      <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    onClick: () => {
-      console.log("Previewing fable...");
-    },
-    href: "#",
-  },
-  {
-    title: "Publish",
-    icon: (
-      <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    onClick: () => {
-      console.log("Publishing fable...");
-    },
-    href: "#",
-  },
-];
 
 export default function FableEditor({ fableId }: { fableId: string }) {
   const [code, setCode] = useState(`<fable>
