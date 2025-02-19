@@ -108,9 +108,7 @@ export default function FableCardList() {
             </CardContent>
             <CardFooter>
               <Link href={`/fable/${fable.id}/edit`} passHref>
-                <a>
-                  <Button variant="outline">Edit Fable</Button>
-                </a>
+                <Button variant="outline">Edit Fable</Button>
               </Link>
             </CardFooter>
           </Card>
